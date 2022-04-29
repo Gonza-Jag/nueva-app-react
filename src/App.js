@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import GuitarsContainer from './components/GuitarsContainer';
 
 
 function App() {
@@ -16,8 +17,11 @@ const styles = {
     
   <div>
     <NavBar></NavBar>
-    <ItemListContainer greeting={'Bienvenidos a Shape Soul- Tienda de #'}></ItemListContainer>
-    <Main></Main>
+    {/*<ItemListContainer greeting={'Bienvenidos a Shape Soul- Tienda de #'}></ItemListContainer>
+    <Main></Main>*/}
+  
+
+    <GuitarsContainer></GuitarsContainer>
     <Footer></Footer>
     
     
