@@ -2,7 +2,7 @@
 const ItemListContainer = ({greeting}) => {
   return (
     
-    <div className="greeting">
+    <div className="greeting" style={{color: '#B8523C'}}>
         {greeting}
         </div>
    

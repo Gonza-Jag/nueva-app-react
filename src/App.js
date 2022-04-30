@@ -17,9 +17,10 @@ const styles = {
     
   <div>
     <NavBar></NavBar>
-    {/*<ItemListContainer greeting={'Bienvenidos a Shape Soul- Tienda de #'}></ItemListContainer>
-    <Main></Main>*/}
+    <ItemListContainer greeting={'Bienvenidos a Shape Soul- Tienda de Guitarras'}></ItemListContainer>
+    
   
+
 
     <GuitarsContainer></GuitarsContainer>
     <Footer></Footer>
