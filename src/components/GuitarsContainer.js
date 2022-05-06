@@ -9,6 +9,7 @@ const GuitarsContainer = () => {
     const [guitars, setGuitars] = useState([])
     
     
+    
     useEffect(() => {
       
     const obtenerGuitars = new Promise( (resolve, reject)=>{

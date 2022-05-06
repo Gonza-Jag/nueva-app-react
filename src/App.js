@@ -5,6 +5,8 @@ import ItemListContainer from './components/ItemListContainer';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import GuitarsContainer from './components/GuitarsContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import GuitarDetails from './components/GuitarDetails';
 
 
 function App() {
@@ -16,16 +18,22 @@ const styles = {
   return (
     
   <div>
-    <NavBar></NavBar>
-    <ItemListContainer greeting={'Bienvenidos a Shape Soul- Tienda de Guitarras'}></ItemListContainer>
+    <BrowserRouter>
     
-  
+    <NavBar></NavBar>
+    <Routes>
 
+      <Route path='/' element={<ItemListContainer greeting={'Bienvenidos a Shape Soul- Tienda de Guitarras'}></ItemListContainer>}/>
 
-    <GuitarsContainer></GuitarsContainer>
+      <Route path='/guitarras' element={<GuitarsContainer></GuitarsContainer>}/>
+      <Route path='/guitarras/:guitarId' element={<GuitarDetails></GuitarDetails>}/>
+
+    </Routes>
+
+     
     <Footer></Footer>
     
-    
+    </BrowserRouter>
     
   </div>
   

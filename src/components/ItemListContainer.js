@@ -4,6 +4,7 @@ const ItemListContainer = ({greeting}) => {
     
     <div className="greeting" style={{color: '#B8523C'}}>
         {greeting}
+        <img src='../assets/img/jazzmaster.jpg'/>
         </div>
    
   )
