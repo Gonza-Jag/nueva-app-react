@@ -33,9 +33,11 @@ obtenerGuitars.then( (result) => {
 
 
   return (
+      <carritoProvider>
     <div>
         {guitars.map( guitar => <GuitarCards key={guitar.id} guitarD={guitar}/> )}
     </div>
+    </carritoProvider>
   )
 }
 
