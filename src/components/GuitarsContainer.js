@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import CarritoProvider from "../Data/context/CarritoContext";
 import {  guitars as guitarsD  } from "../Data/guitars";
 import GuitarCards from "./GuitarCards";
 import ListaCarrito from "./ListaCarrito";
@@ -34,14 +35,14 @@ obtenerGuitars.then( (result) => {
 
 
   return (
-      <carritoProvider>
+      <CarritoProvider>
 
     <ListaCarrito></ListaCarrito>
     <div>
         {guitars.map( guitar => <GuitarCards key={guitar.id} guitarD={guitar}/> )}
     </div>
 
-    </carritoProvider>
+    </CarritoProvider>
   )
 }
 

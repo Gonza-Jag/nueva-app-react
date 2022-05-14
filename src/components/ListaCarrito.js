@@ -1,10 +1,13 @@
 import { useContext } from "react"
-import { carritoContext } from "../Data/context/carritoContext"
+import { carritoContext } from "../Data/context/CarritoContext"
+import { guitars } from "../Data/guitars"
+
+
+
 
 const ListaCarrito = () => {
 
     const { carrito } = useContext(carritoContext)
-
 
   return (
     <div>
@@ -15,3 +18,4 @@ const ListaCarrito = () => {
 }
 
 export default ListaCarrito
+

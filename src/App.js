@@ -7,6 +7,13 @@ import Footer from './components/Footer';
 import GuitarsContainer from './components/GuitarsContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GuitarDetails from './components/GuitarDetails';
+import CarritoProvider, { CartContext } from './Data/context/CarritoContext';
+import ListaCarrito from './components/ListaCarrito';
+import ItemCount from './components/ItemCount';
+import { carritoContext } from './Data/context/CarritoContext';
+
+
+
 
 
 function App() {
@@ -20,6 +27,8 @@ const styles = {
   <div>
     <BrowserRouter>
     
+<carritoContext></carritoContext>
+    
     <NavBar></NavBar>
     <Routes>
 
@@ -30,7 +39,8 @@ const styles = {
 
     </Routes>
 
-     
+    
+
     <Footer></Footer>
     
     </BrowserRouter>
