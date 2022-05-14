@@ -28,7 +28,7 @@ const getGuitarDetails = () => {
         setTimeout( () => {
             resolve(guitars.find( r => r.id === guitarId) )
 
-        }, 1000);
+        }, 500);
     })
 
 }

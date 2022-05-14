@@ -7,19 +7,24 @@ export const carritoContext = createContext({
 
 
 
-const carritoProvider = ( {children} ) => {
+const CarritoProvider = ( {children} ) => {
 
-  const [carrito, setCarrito] = useState( [] )
+  const [carrit, setCarrit] = useState( [] )
 
   const añadirAlCarrito =( guitarId) =>{
-    setCarrito( currentCarrito =>{
+    setCarrit( currentCarrito =>{
       return currentCarrito.concat(guitarId)
 
     })
   }
+
+  const context = { carrit,
+     añadirAlCarrito
+
+  }
     
   return (
-     <carritoContext.Provider value={ {carrito, añadirAlCarrito} }>
+     <carritoContext.Provider value={ context }>
          {children}
 
      </carritoContext.Provider>
@@ -27,4 +32,4 @@ const carritoProvider = ( {children} ) => {
   )
 }
 
-export default carritoProvider
+export default CarritoProvider
