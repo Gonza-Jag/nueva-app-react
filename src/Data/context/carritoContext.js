@@ -13,9 +13,9 @@ const CarritoProvider = ( {children} ) => {
   const [carrito, setCarrit] = useState( [] )
 
 
-  const añadirAlCarrito =( guitarId) =>{
+  const añadirAlCarrito =( guitarId, guitarName,guitarModel) =>{
     setCarrit( currentCarrito => {
-      return currentCarrito.concat(guitarId)
+      return currentCarrito.concat(guitarId, guitarName,guitarModel)
 
     })
   }
