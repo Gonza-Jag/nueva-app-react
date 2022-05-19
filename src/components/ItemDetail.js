@@ -1,30 +1,34 @@
-import React from 'react';
+import React from 'react'
+import CarritoProvider from '../Data/context/CarritoContext'
+import { guitars } from '../Data/guitars'
+import GuitarCards from './GuitarCards'
+import ItemCount from './ItemCount'
 
-import { useCartContext } from '../context/CartContextProvider';
-import ItemCount from './ItemCount';
+const ItemDetail = ( {producto} ) => {
 
-export default function ItemDetail({ product }) {
-  const { addToCart } = useCartContext();
+    const  { id, name, model, color, image, stock, precio } = producto
 
-  function handleOnAdd(count) {
-    console.log(count);
-    addToCart(product, count);
-  }
+    
+    const onAdd = (count) => {
+
+        console.log(count)
+    }
+
+
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: '#D0C9C0',
-      }}
-    >
-      <h1>{product.name}</h1>
-      <h4>Precio: ${product.price}</h4>
-      <h4>Stock: {product.stock} unidades</h4>
-      <img src={product.imgUrl} alt={product.name} height="250" width="250" />
-      <ItemCount initial={1} stock={product.stock} onAdd={handleOnAdd} />
+    <CarritoProvider>
+
+    <div>
+        {guitars.map( guitar => <GuitarCards key={guitar.id} guitarD={guitar}/> )}
     </div>
-  );
+    <span className='font-bold text-5xl leading-none align-baseline'>
+        ${precio}
+    </span>
+    <ItemCount stock={stock} onAdd={onAdd}/>
+
+    </CarritoProvider>
+  )
 }
+
+export default ItemDetail

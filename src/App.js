@@ -8,9 +8,10 @@ import GuitarsContainer from './components/GuitarsContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GuitarDetails from './components/GuitarDetails';
 import CarritoProvider, { CartContext } from './Data/context/CarritoContext';
-import ListaCarrito from './components/ListaCarrito';
-import ItemCount from './components/ItemCount';
 import { carritoContext } from './Data/context/CarritoContext';
+import ItemCount from './components/ItemCount';
+import ItemDetail from './components/ItemDetail';
+import Carrito from './components/Carrito';
 
 
 
@@ -25,11 +26,13 @@ const styles = {
   return (
     
   <div>
+    <CarritoProvider>
+
     <BrowserRouter>
     
-<carritoContext></carritoContext>
-    
     <NavBar></NavBar>
+
+    <Carrito/>
     <Routes>
 
       <Route path='/' element={<ItemListContainer greeting={'Bienvenidos a Shape Soul- Tienda de Guitarras'}></ItemListContainer>}/>
@@ -45,6 +48,7 @@ const styles = {
     
     </BrowserRouter>
     
+    </CarritoProvider>
   </div>
   
  

@@ -1,29 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-const ItemCount = ({ initial, stock, onAdd }) => {
-  const [count, setCount] = useState(initial);
+const ItemCount = ({stock, onAdd} ) => {
+    const [count, setCount] = useState(0)
 
-  const handleSubstract = () => {
-    if (count > initial) {
-      setCount((counter) => counter - 1);
+    const handleAdd = () => {
+        if (count < stock) {
+            setCount(count + 1)
+        }
     }
-  };
-  const handleAdd = () => {
-    if (count < stock) {
-      setCount((counter) => counter + 1);
-    }
-  };
+        const handleRemove = () => {
+            if (count > 0 ) {
+                setCount(count - 1 )
+            }
+        }
+    
+
+
+
 
   return (
     <div>
-      <div>
-        <button onClick={handleSubstract}>-</button>
-        <span>{count}</span>
-        <button onClick={handleAdd}>+</button>
-      </div>
-      <button onClick={() => onAdd(count)}>Agregar al carrito</button>
-    </div>
-  );
-};
+        <button className='btn' onClick={handleRemove}>
+            <i className='fas fa-plus'></i>
+        </button>
+        <label className='alert alert-white'> {count} </label>
 
-export default ItemCount;
+        <button className='btn' onClick={handleAdd}>
+            <i className='fas fa-plus'></i>
+            </button>
+
+            <button className='btn bg-primary text-white btn-block' onClick={ () => onAdd(count)}
+            >
+            Agregar al carrito
+            </button>
+   </div>
+
+   
+  )
+}
+
+export default ItemCount  

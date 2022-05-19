@@ -33,6 +33,7 @@ const getGuitarDetails = () => {
 
 }
 
+
   return (
       <>
     <strong className='p-3'>Especificaciones:</strong>

@@ -1,9 +1,7 @@
 
 import { useEffect, useState } from "react";
-import CarritoProvider from "../Data/context/CarritoContext";
 import {  guitars as guitarsD  } from "../Data/guitars";
 import GuitarCards from "./GuitarCards";
-import ListaCarrito from "./ListaCarrito";
 
 
 const GuitarsContainer = () => {
@@ -35,14 +33,13 @@ obtenerGuitars.then( (result) => {
 
 
   return (
-      <CarritoProvider>
-
-    <ListaCarrito></ListaCarrito>
+     
+<div>
     <div>
         {guitars.map( guitar => <GuitarCards key={guitar.id} guitarD={guitar}/> )}
     </div>
-
-    </CarritoProvider>
+    </div>
+    
   )
 }
 
