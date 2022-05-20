@@ -12,6 +12,8 @@ import { carritoContext } from './Data/context/CarritoContext';
 import ItemCount from './components/ItemCount';
 import ItemDetail from './components/ItemDetail';
 import Carrito from './components/Carrito';
+import GuitarCards from './components/GuitarCards';
+import { useState } from 'react';
 
 
 
@@ -33,12 +35,13 @@ const styles = {
     <NavBar></NavBar>
 
     <Carrito/>
+
     <Routes>
 
       <Route path='/' element={<ItemListContainer greeting={'Bienvenidos a Shape Soul- Tienda de Guitarras'}></ItemListContainer>}/>
 
-      <Route path='/guitarras' element={<GuitarsContainer></GuitarsContainer>}/>
-      <Route path='/guitarras/:guitarId' element={<GuitarDetails></GuitarDetails>}/>
+      <Route path='/guitarras' element={<GuitarsContainer/>}/>
+      <Route path='/guitarras/:guitarId' element={<GuitarDetails/>}/>
 
     </Routes>
 
