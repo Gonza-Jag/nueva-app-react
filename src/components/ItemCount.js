@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({stock, onAdd} ) => {
-    const [count, setCount] = useState(0)
+const ItemCount = ({initial, stock, onAdd} ) => {
+    const [count, setCount] = useState(initial)
 
     const handleAdd = () => {
         if (count < stock) {
-            setCount(count + 1)
+            setCount(counter => counter + 1)
         }
     }
         const handleRemove = () => {
-            if (count > 0 ) {
-                setCount(count - 1 )
+            if (count > initial ) {
+                setCount(counter => counter - 1)
             }
         }
     
@@ -21,15 +21,15 @@ const ItemCount = ({stock, onAdd} ) => {
   return (
     <div>
         <button className='btn' onClick={handleRemove}>
-            <i className='fas fa-plus'></i>
+            
         </button>
-        <label className='alert alert-white'> {count} </label>
+        <span className='alert alert-white'> {count} </span>
 
         <button className='btn' onClick={handleAdd}>
-            <i className='fas fa-plus'></i>
+            
             </button>
 
-            <button className='btn bg-primary text-white btn-block' onClick={ () => onAdd(count)}
+            <button className='btn' onClick={() => onAdd(count)}
             >
             Agregar al carrito
             </button>
