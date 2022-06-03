@@ -8,7 +8,7 @@ const Carrito = () => {
 
   return (
     <div>
-     <strong> Carrito:</strong> {carrito.join(',')}
+    <strong> Carrito:</strong> {carrito.join(',')}
     </div>
   )
 }

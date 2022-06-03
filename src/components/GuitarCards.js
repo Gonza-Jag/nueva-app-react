@@ -1,8 +1,8 @@
-import { useContext} from "react"
+
 import { Link } from "react-router-dom"
-import { carritoContext} from "../Data/context/CarritoContext"
 import ItemCount from "./ItemCount"
 import { guitars } from "../Data/guitars"
+import { useFavs } from "../Data/context/CarritoContext"
 
 
 
@@ -13,7 +13,7 @@ import { guitars } from "../Data/guitars"
 
 const GuitarCards = ({data}) => {
   
-  const { añadirAlCarrito} = useContext(carritoContext)
+  const { añadirAlCarrito} = useFavs()
   
   
   return (

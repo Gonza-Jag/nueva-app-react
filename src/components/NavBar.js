@@ -8,7 +8,7 @@ const NavBar = ()=> {
     <Link to='/' className="btn btn-ghost normal-case text-xl">Shape Soul</Link>
     <Link to='/guitarras' className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"> Guitarras </Link>  </div>
   <div className="flex-none">
-  <Link to='/empanadas' className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Empanadas </Link>  </div>
+  <Link to='/saveguitars' className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">En el Carrito </Link>  </div>
   <div className="flex-none">
     
     <div className="dropdown dropdown-end">

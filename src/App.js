@@ -16,6 +16,7 @@ import GuitarCards from './components/GuitarCards';
 import { useState } from 'react';
 import EmpanadaCarne from './components/Shop/EmpanadaCarne';
 import Empanadas from './components/Shop/Empanadas';
+import SaveGuitars from './components/SaveGuitars';
 
 
 
@@ -46,6 +47,7 @@ const styles = {
       <Route path='/guitarras/:guitarId' element={<GuitarDetails/>}/>
       <Route path='/empanada' element={<EmpanadaCarne/>}/>
       <Route path='/empanadas' element={<Empanadas/>}/>
+      <Route path='/saveguitars' element={<SaveGuitars/>}/>
 
     </Routes>
 

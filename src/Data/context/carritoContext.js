@@ -1,10 +1,14 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 
 export const carritoContext = createContext({
     carrito: [],
     añadirAlCarrito: () => {}
 } )
+
+export const useFavs = () =>{
+  return useContext(carritoContext)
+}
 
 
 
