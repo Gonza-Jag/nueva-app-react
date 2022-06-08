@@ -18,10 +18,17 @@ const CarritoProvider = ( {children} ) => {
 
 
   const añadirAlCarrito =( guitarId, guitarName,guitarModel ) =>{
-    setCarrit( currentCarrito => {
-      return currentCarrito.concat(guitarId, guitarName,guitarModel)
-
-    })
+    const guitarFormatted = {"guitarId":guitarId, "guitarName":guitarName,"guitarModel":guitarModel,'number':0}
+   if(carrito.find(el=>el.guitarName === guitarName)) {
+      carrito.forEach(guitar => {
+        guitar.number = guitar.number + 1
+      });
+    }else{
+      setCarrit( currentCarrito => {
+        return currentCarrito.concat(guitarFormatted)
+      })
+    }
+    console.log(carrito);
   }
 
   const context = { carrito,

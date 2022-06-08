@@ -1,6 +1,6 @@
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
 import React, { useEffect } from 'react'
-import { useFavs } from '../Data/context/CarritoContext'
+import { useFavs } from '../Data/context/carritoContext'
 
 const SaveGuitars = () => {
     const { carrito} = useFavs()

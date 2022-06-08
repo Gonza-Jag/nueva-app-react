@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 import ItemCount from "./ItemCount"
 import { guitars } from "../Data/guitars"
-import { useFavs } from "../Data/context/CarritoContext"
+import { useFavs } from "../Data/context/carritoContext"
 
 
 

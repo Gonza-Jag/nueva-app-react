@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { carritoContext } from "../Data/context/CarritoContext"
+import { carritoContext } from "../Data/context/carritoContext"
 
 
 

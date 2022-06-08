@@ -1,5 +1,5 @@
 import React from 'react'
-import CarritoProvider from '../Data/context/CarritoContext'
+import CarritoProvider from '../Data/context/carritoContext'
 import { guitars } from '../Data/guitars'
 import GuitarCards from './GuitarCards'
 import ItemCount from './ItemCount'

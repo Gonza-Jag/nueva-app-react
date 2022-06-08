@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import {  guitars as guitarsD  } from "../Data/guitars";
 import GuitarCards from "./GuitarCards";
 import ItemCount from "./ItemCount";
-import { carritoContext } from "../Data/context/CarritoContext";
+import { carritoContext } from "../Data/context/carritoContext";
 
 
 const GuitarsContainer = () => {
